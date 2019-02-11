@@ -90,7 +90,7 @@ functions:
 #          trigger: PreSignUp
 
 #    Define function environment variables here
-#    environment:
+    environment:
       GOOGLE_URL: 'www.google.com'
 
 # you can add CloudFormation resource templates here
