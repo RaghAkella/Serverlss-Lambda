@@ -62,14 +62,14 @@ functions:
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
-#    events:
-         - http:
+   events:
+     - http:
           path: api/v1/individuals/{id}
           method: get
-          - http:
+     - http:
           path: api/v1/individuals/{id}/transactions
           method: get
-          - http:
+     - http:
           path: api/v1/individuals/{id}/knowledgecommunities
           method: get
 
