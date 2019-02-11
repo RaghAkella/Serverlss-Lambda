@@ -22,6 +22,7 @@ provider:
   runtime: nodejs8.10
   timeout: 60
   memorySize: 512
+
 # you can overwrite defaults here
   stage: dev1
   region: us-east-1
@@ -44,7 +45,7 @@ provider:
 
 # you can define service wide environment variables here
 #  environment:
-    
+#    variable1: value1
 
 # you can add packaging information here
 #package:
@@ -62,18 +63,10 @@ functions:
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
-   events:
-     - http:
+    events:
+      - http:
           path: api/v1/individuals/{id}
           method: get
-     - http:
-          path: api/v1/individuals/{id}/transactions
-          method: get
-     - http:
-          path: api/v1/individuals/{id}/knowledgecommunities
-          method: get
-
-          
 #      - s3: ${env:BUCKET}
 #      - schedule: rate(10 minutes)
 #      - sns: greeter-topic
@@ -91,15 +84,14 @@ functions:
 #            detail:
 #              state:
 #                - pending
-      - cloudwatchLog: '/aws/lambda/index'
+#      - cloudwatchLog: '/aws/lambda/hello'
 #      - cognitoUserPool:
 #          pool: MyUserPool
 #          trigger: PreSignUp
 
 #    Define function environment variables here
 #    environment:
-      GOOGLE_LINK: 'www.google.com'
-      YAHOO_LINK: 'www.yahoo.com'
+      GOOGLE_URL: 'www.google.com'
 
 # you can add CloudFormation resource templates here
 #resources:
